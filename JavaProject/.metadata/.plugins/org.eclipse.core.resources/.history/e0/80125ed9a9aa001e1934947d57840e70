@@ -1,0 +1,28 @@
+package day0104;
+
+public class QuizDataType_10 {
+
+	public static void main(String[] args) {
+		// 변수는 args를 이용(변수는 5개 0~4까지 선언)
+		/*
+		 * 학생명 : 김선호 님 지역 : 부산 나이 23세
+		 * 
+		 * ================================================ 김선호님의 자바점수는 88점 오라클점수는 77점 총
+		 * 165점입니다.
+		 * 
+		 */
+
+		// 1.변수선언 2. 계산 3. 출력
+
+		String name = "김선호";
+		String area = "부산";
+		int age = 23;
+		int java = 88;
+		int oracle = 77;
+		
+
+		System.out.printf("학생명 : %s님 \n 지역 : %s \n 나이 : %d세 \n %s님의 자바점수는 %d점 오라클점수는 %d점 총 %d점입니다.", name, area, age,name,);
+
+	}
+
+}
