@@ -1,0 +1,15 @@
+package day0105;
+
+public class SwitchTest_17 {
+
+	public static void main(String[] args) {
+		// switch문 예제_#1
+		
+		int a=3;
+		
+		//break가 없을 경우 끝까지 실행
+		switch(a>=5)
+
+	}
+
+}

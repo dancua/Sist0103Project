@@ -1,0 +1,13 @@
+package day0105;
+
+import java.util.Scanner;
+
+public class QuizOper_13 {
+
+	public static void main(String[] args) {
+		// 3개의 숫자를 입력하여
+		Scanner sc = new Scanner(System.in);
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package day0105;
+
+public class QuizMyAgeInOut_08 {
+	
+	public static void main(String[] args) {
+		/*
+		 * 당신의 이름은? ==>
+		 * 당신이 태어난 연도는 ==> 1988
+		 * 당신이 사는 지역은? ==> 경기
+		 * 
+		 * ==========================
+		 * [이수연 님의 개인정보]
+		 * ==========================
+		 * 이름: 이수연
+		 * 태어난년도: 1988
+		 * 나이: **세
+		 * 지역: 경기
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+	}
+}
