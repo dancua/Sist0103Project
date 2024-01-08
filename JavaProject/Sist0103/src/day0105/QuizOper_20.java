@@ -20,7 +20,7 @@ public class QuizOper_20 {
 		 *  수량이 5개미만일때
 		 */
 		
-		double total;
+		double total,sale;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -32,8 +32,8 @@ public class QuizOper_20 {
 		int bill = sc.nextInt();
 		
 		total = (count*bill);
+		sale = total * 0.1;
 	
-		
 		System.out.println("====================");
 		System.out.println("5개이상 구매시 10% 할인됩니다.");
 		if(count >= 5)
@@ -42,9 +42,9 @@ public class QuizOper_20 {
 			total = total;
 		System.out.println(name + count + "개는 총 " + total + " 원 입니다.");
 		if(count >= 5)
-			System.out.println("할인된 금액: " + total*0.1);
+			System.out.println("할인된 금액: " + sale);
 		else
-			System.out.println("할인적용 안됌");
+			System.out.println("할인적용 안되었습니다.");
 		
 	}
 }

@@ -23,20 +23,19 @@ public class QuizOper_19 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("이름을 입력하세요");
+		System.out.print("이름을 입력하세요 ==>");
 		String name = sc.nextLine();
-		System.out.println("국,영,수 점수를 입력하세요");
+		System.out.print("국,영,수 점수를 입력하세요 ==>");
 		int gu = sc.nextInt();
 		int eng = sc.nextInt();
 		int mat = sc.nextInt();
 		
 		int tot = (gu + eng + mat);
-		double mean = tot / 3;
+		double mean = tot / 3.0;
 		
 		if(mean >= 90)
 			System.out.println("");
 			
-		
 		System.out.println("========================");
 		System.out.printf("[%s님의 기말고사 성적]\n",name);
 		System.out.println("총점: " + tot);
@@ -49,5 +48,4 @@ public class QuizOper_19 {
 			System.out.println("불합격");
 	
 	}
-
 }

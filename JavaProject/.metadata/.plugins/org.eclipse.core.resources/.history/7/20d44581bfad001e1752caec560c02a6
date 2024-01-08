@@ -1,0 +1,14 @@
+package day0108;
+
+import java.util.Scanner;
+
+public class OperReview_02 {
+
+	public static void main(String[] args) {
+		// 나이와 띠(인덱스 값이 정해져있음) 띠: 로직에서 사용하는 순서는 원숭이 띠
+		//원숭이 닭 쥐 소 호랑이 토끼 용 뱀 말 양 개 돼지
+
+		Scanner sc = new Scanner(System.in);
+	}
+
+}
