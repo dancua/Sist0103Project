@@ -1,0 +1,18 @@
+package day0109;
+
+public class ArraysString_09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String [] str;
+		str = new String[4];
+		
+		//초기화
+		str[0] ="김구라";
+		str[1] = "유재석";
+		str[1] = "하하";
+		str[1] = "이광수";
+	}
+
+}

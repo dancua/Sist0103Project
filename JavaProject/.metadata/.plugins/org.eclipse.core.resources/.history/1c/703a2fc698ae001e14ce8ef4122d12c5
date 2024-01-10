@@ -1,0 +1,15 @@
+package day0109;
+
+import java.util.Random;
+
+public class Random_05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random r = new Random();
+		
+		System.out.println("1");
+		
+	}
+
+}

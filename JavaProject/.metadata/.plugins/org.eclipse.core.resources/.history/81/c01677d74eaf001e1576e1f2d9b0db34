@@ -1,0 +1,11 @@
+package day0110;
+
+public class ArraySearchNum_01 {
+
+	public static void main(String[] args) {
+		// 
+		
+		int [] data = {2,12,99,65,47,87,32,55,66,49,91,120};
+	}
+
+}

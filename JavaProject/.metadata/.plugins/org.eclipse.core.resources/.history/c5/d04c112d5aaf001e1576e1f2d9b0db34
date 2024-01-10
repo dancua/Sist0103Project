@@ -1,0 +1,11 @@
+package day0110;
+
+public class ArraySortString {
+	
+	public static void main(String[] args) {
+	
+		String [] data = {"이승미","홍수아","김민선","강호동"};
+		
+	}
+
+}

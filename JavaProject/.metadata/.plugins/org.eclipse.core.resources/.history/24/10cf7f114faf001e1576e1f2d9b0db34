@@ -1,0 +1,11 @@
+package day0110;
+
+public class ArraySearchNum_01 {
+
+	public static void main(String[] args) {
+		// 배열중에서 숫자찾기 
+		
+		int [] data = {2,12,99,65,47,87,32,55,66,49,91,120,259};
+	}
+
+}

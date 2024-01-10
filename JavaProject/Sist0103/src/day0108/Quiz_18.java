@@ -48,7 +48,6 @@ public class Quiz_18 {
 		int sum = 0;
 		int cnt = 0;
 		
-		
 		while(true) {
 			System.out.println("숫자를 1~100사이에서 입력하세요.");
 			count = sc.nextInt();
@@ -64,10 +63,34 @@ public class Quiz_18 {
 			}
 		}
 		System.out.printf("갯수: %d   합계: %d",cnt,sum);
+	}
+		
+		/*
+		int cnt,sum = 0;
+		
+		while(true) { 
+			System.out.println("점수입력");
+			int su = sc.nextInt();
+			
+			if(su==0)
+				break;
+			
+			if(su<1 || su >100)
+			{
+				System.out.println("\t다시 입력바람");
+				continue;
+			}
+			cnt++;
+			sum+=su;
+		}
+		avg =(double)sum/cnt;
+		
+		System.out.println("총갯수: %d  총점:  %d",cnt,sum);
 }
-
+	*/
 	public static void quiz_3() {
 
 	}
 
 }
+

@@ -1,0 +1,13 @@
+package day0110;
+
+public class ObjectEx_07 {
+	
+	String name; //멤버 인스턴스 변수
+	static String MESSAGE="Happy day"; // 상수
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
