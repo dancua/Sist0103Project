@@ -1,0 +1,26 @@
+package day0110;
+
+class Car{
+	String model;
+	int speed;
+	
+	Car(String model){
+		this.model = model;
+	}
+	void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	void run() {
+		this.setSpeed(100);
+		System.out.println(this.model);
+	}
+}
+
+public class Book243_17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
