@@ -1,0 +1,23 @@
+package day0110;
+
+public class QuizClass_16 {
+	
+	private String sangpum;
+	int su;
+	int dan;
+	static String SHOPNAME="롯데마트";
+	
+	/*
+	 * 생성후 초기값 준후 출력 
+	 * 상점명: 롯데마트 입고물품
+	 * ==========================================
+	 * 상품명 : 
+	 * 
+	 */
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
