@@ -1,0 +1,21 @@
+package day0111;
+
+class Emp{
+	private String sName; //사원명
+	private int gPay; 	  //기본급여
+	private int fSu;	 // 가족수 
+	private int tSu;	//오버타임시간
+	
+	//setter getter
+	
+}
+
+
+public class SawonInstanceScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

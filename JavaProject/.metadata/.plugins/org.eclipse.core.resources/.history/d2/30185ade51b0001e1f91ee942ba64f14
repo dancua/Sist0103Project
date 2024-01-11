@@ -1,0 +1,16 @@
+package day0111;
+
+class Emp{
+	private String sName;
+	private int gPay;
+}
+
+
+public class SawonInstanceScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

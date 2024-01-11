@@ -4,9 +4,17 @@
     <fullyQualifiedTypeName name="day0104.Calendar_11"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.awt.SystemColor"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.awt.datatransfer.SystemFlavorMap"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="day0110.ObjectEx_07"/>
+    <fullyQualifiedTypeName name="day0110.StaticInstance_09"/>
+    <fullyQualifiedTypeName name="day0110.MyDate_14"/>
+    <fullyQualifiedTypeName name="day0110.MyDate"/>
+    <fullyQualifiedTypeName name="day0110.Test"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="day0110.GetInstance_15"/>
+    <fullyQualifiedTypeName name="day0111.Person"/>
 </qualifiedTypeNameHistroy>

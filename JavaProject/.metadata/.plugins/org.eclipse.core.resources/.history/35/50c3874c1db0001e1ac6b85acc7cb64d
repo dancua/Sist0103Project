@@ -1,0 +1,18 @@
+package day0111;
+
+class Test{
+	
+	private String name;
+	private int grade;
+}
+
+
+public class ThisEx_03 {
+
+	public static void main(String[] args) {
+	
+		
+
+	}
+
+}

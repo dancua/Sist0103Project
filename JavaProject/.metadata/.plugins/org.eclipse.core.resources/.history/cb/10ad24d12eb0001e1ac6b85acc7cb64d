@@ -1,0 +1,23 @@
+package day0111;
+
+class Student1{
+	
+	private String stuName;
+	private String hp;
+	private String score;
+	
+	//생성자 3개짜리
+	public Student1(String name, String hp, String score) {
+	
+	}
+	
+}
+
+public class ArrObTest_10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

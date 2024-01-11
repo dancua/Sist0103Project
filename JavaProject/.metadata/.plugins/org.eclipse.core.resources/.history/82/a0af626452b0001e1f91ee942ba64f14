@@ -1,0 +1,52 @@
+package day0111;
+
+class Emp{
+	private String sName; //사원명
+	private int gPay; 	  //기본급여
+	private int fSu;	 // 가족수 
+	private int tSu;	//오버타임시간
+	
+	//setter getter
+	public String getsName() {
+		return sName;
+	}
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+	public int getgPay() {
+		return gPay;
+	}
+	public void setgPay(int gPay) {
+		this.gPay = gPay;
+	}
+	public int getfSu() {
+		return fSu;
+	}
+	public void setfSu(int fSu) {
+		this.fSu = fSu;
+	}
+	public int gettSu() {
+		return tSu;
+	}
+	public void settSu(int tSu) {
+		this.tSu = tSu;
+	}
+	
+	public int getFamiltySudang() {
+		
+	}
+	
+	public int getTimeSudang() {
+		
+	}
+}
+
+
+public class SawonInstanceScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

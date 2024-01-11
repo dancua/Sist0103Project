@@ -1,0 +1,19 @@
+package day0111;
+
+class MyCar1{
+	String carName;
+	int carPrice;
+	String carColor;
+}
+
+
+public class CallByReference_12 {
+	
+	public static void dataIn
+	
+	public static void main(String [] args)
+	{
+		
+	}
+
+}

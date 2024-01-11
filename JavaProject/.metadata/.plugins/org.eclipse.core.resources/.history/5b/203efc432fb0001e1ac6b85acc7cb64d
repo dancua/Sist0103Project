@@ -1,0 +1,36 @@
+package day0111;
+
+class Student1{
+	
+	private String stuName;
+	private String hp;
+	private String score;
+	
+	//생성자 3개짜리
+	public Student1(String name, String hp, int score) {
+		this.stuName = name;
+		this.hp = hp;
+		this.score = score;
+	
+	}
+	
+	//출력메서드
+	public void writeData()
+	{
+		System.out.println("이름: "+ stuName);
+		System.out.println("전화번보: " + hp);
+		System.out.println("점수: " + score);
+	}
+	
+}
+
+public class ArrObTest_10 {
+
+	public static void main(String[] args) {
+		
+		Student1 s1 = new Student1("11","ff",88);
+		Sutdent1 s2 = new Student1
+
+	}
+
+}

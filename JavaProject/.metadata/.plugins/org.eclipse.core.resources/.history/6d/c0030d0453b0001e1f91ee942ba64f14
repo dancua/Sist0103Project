@@ -1,0 +1,69 @@
+package day0111;
+
+/* getFamilySudang(0 : 가족수당 = 가족수 *50000(단 2인이상은 무조건 10만원)
+ * getTimeSudang() : 시간수당 = 초과시간*3000(단 10시간 이상은 30만원으로 통일)
+ * getTotalPay() : 실수령액 = 기본급 + 가족수당 + 시간수당
+ * 
+ * 메인에서는 인원수 입력후 해당사원에 대한 이름,기본급,가족수,시간수 입력받고 출력
+ */
+
+class Emp{
+	private String sName; //사원명
+	private int gPay; 	  //기본급여
+	private int fSu;	 // 가족수 
+	private int tSu;	//오버타임시간
+	
+	//setter getter
+	public String getsName() {
+		return sName;
+	}
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+	public int getgPay() {
+		return gPay;
+	}
+	public void setgPay(int gPay) {
+		this.gPay = gPay;
+	}
+	public int getfSu() {
+		return fSu;
+	}
+	public void setfSu(int fSu) {
+		this.fSu = fSu;
+	}
+	public int gettSu() {
+		return tSu;
+	}
+	public void settSu(int tSu) {
+		this.tSu = tSu;
+	}
+	
+	public int getFamiltySudang() {
+//getFamilySudang(0 : 가족수당 = 가족수 *50000(단 2인이상은 무조건 10만원)
+		int n = 0;
+		if(fSu >= 2) {
+			n = 50000*fSu;
+		}else {
+			n = 50000;
+			
+		}
+		return 0;
+		
+	}
+	
+	public int getTimeSudang() {
+	
+		return 0;
+	}
+}
+
+
+public class SawonInstanceScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

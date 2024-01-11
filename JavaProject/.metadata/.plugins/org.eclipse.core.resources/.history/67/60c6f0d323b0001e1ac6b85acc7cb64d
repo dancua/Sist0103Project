@@ -1,0 +1,36 @@
+package day0111;
+
+class Artist{
+	//변수명
+	private String group;
+	private String song;
+	
+	static String ment;
+	static int cnt;
+	
+	
+	//명시적생성자
+	public Artist(String group, String song) {
+		this.group = group;
+		this.song = song;
+	}
+	//출력메서드 한번에 만들기
+	void run() {
+		System.out.println("**아티스트 정보_ "+ cnt+"**");
+		System.out.println("소속학급: "+ Member.ban);
+			System.out.println("소속기획사: "+ Artist.ment);
+			System.out.println("그룹명: " +this.group);
+			System.out.println("주소: " + this.song);
+			System.out.println("--------------------------");
+	}
+}
+
+public class QuizInstance_06 {
+
+	public static void main(String[] args) {
+		
+		Artist art1 = new Artist("bts", "버터");
+		
+	}
+
+}
