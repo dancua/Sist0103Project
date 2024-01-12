@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="java.awt.SystemColor"/>
     <fullyQualifiedTypeName name="java.awt.datatransfer.SystemFlavorMap"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="day0110.ObjectEx_07"/>
@@ -17,4 +16,5 @@
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="day0110.GetInstance_15"/>
     <fullyQualifiedTypeName name="day0111.Person"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

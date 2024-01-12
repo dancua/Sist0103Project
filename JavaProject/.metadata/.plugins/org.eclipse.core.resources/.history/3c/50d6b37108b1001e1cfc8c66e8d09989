@@ -1,0 +1,15 @@
+package day0112;
+
+class Car{
+	
+	private String carCompany;
+	
+}
+
+class MyCar{
+	
+}
+
+public class Inheri_08 {
+
+}

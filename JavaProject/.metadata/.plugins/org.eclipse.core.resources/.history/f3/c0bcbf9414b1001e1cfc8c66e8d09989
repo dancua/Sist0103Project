@@ -1,0 +1,11 @@
+package day0112;
+//추상 클래스
+//추상클래스는 new 로 생성 못함
+public class Abstract_11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

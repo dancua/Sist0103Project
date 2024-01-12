@@ -1,0 +1,20 @@
+package day0112;
+
+//부모 클래스
+class Color {
+	
+	//메서드
+	public void hello() {
+		System.out.println("안녕하세요~~");
+	}
+
+}
+
+public class Inherit_09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

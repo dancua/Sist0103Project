@@ -1,0 +1,13 @@
+package day0112;
+
+public class SuperOb_03 {
+
+	String name;
+	int age;
+	
+	//명시적생성자
+	private void SuperObj() {
+		// TODO Auto-generated method stub
+
+	}
+}

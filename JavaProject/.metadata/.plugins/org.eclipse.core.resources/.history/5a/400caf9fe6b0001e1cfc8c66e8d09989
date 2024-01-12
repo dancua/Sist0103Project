@@ -1,0 +1,23 @@
+package day0112;
+/*
+ * [쌍용매장 입고상품]
+ * =================
+ * 번호		상품명	가격		색상
+ * 1		요가매트	25000원			
+ * 
+ */
+
+class Shop{
+	
+	
+	static int cnt;
+}
+
+public class ArrReview_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

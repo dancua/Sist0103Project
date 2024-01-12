@@ -1,0 +1,27 @@
+package day0112;
+
+interface InterA {
+	//미완 메서드
+	public void singasong(); 
+	public void draw();
+}
+/////////////////////
+interface InterB extends InterA{
+	public void playgame();
+	public void write();
+	
+}
+/////////////////////
+class Imple{
+	
+	
+}
+/////////////////////
+public class InterImpl_14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

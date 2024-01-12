@@ -1,0 +1,57 @@
+package day0112;
+
+//추상클래스이자 부모 클래스
+abstract class Board{
+	public abstract void play();
+}
+///////////////////////////
+class Insert extends Board{
+
+	@Override
+	public void play() {
+	System.out.println("입력합니다.");
+		
+	}
+	
+}
+///////////////////////////
+class Select extends Board{
+
+	@Override
+	public void play() {
+		
+		
+	}
+	
+}
+///////////////////////////
+class Update extends Board{
+
+	@Override
+	public void play() {
+		
+		
+	}
+	
+}
+///////////////////////////
+class Delete extends Board{
+
+	@Override
+	public void play() {
+		
+		
+	}
+	
+}
+///////////////////////////
+
+
+public class Abstract_12 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
