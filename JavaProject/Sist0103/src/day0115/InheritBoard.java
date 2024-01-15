@@ -15,7 +15,7 @@ class Insert implements Command{
 	}
 }
 //////////////////////////
-class List implements Command{
+class list implements Command{
 
 	@Override
 	public void write() {
@@ -67,7 +67,7 @@ public class InheritBoard {
 					comm = new Insert();
 					break;
 				case 2:
-					comm = new List();
+					comm = new list();
 					break;
 				case 3:
 					comm = new Modify();

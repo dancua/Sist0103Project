@@ -1,0 +1,11 @@
+package day0115;
+class Shop{
+	
+}
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		
+	}
+}

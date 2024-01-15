@@ -1,0 +1,17 @@
+package day0115;
+
+import java.util.*;
+
+
+class Shop{
+	
+	List<Shop> list = new List<Shop>();
+	
+}
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		
+	}
+}

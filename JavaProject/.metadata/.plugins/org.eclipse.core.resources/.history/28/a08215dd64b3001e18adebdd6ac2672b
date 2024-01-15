@@ -1,0 +1,18 @@
+package day0115;
+
+import java.util.List;
+import java.util.Vector;
+
+class Shop{
+	
+	List<Shop> list = new Vector<Shop>();
+	
+}
+
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		
+	}
+}

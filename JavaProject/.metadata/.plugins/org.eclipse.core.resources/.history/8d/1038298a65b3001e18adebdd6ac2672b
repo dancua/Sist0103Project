@@ -1,0 +1,22 @@
+package day0115;
+
+import java.util.List;
+
+import java.util.Vector;
+
+public class Quiz1 {
+	
+	List<Shop> list = new Vector<Shop>();
+	
+	//입력메서드
+	public void Shops(){
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+	}
+}
