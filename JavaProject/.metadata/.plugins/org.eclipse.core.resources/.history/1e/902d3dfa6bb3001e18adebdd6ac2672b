@@ -1,0 +1,8 @@
+package day0115;
+
+public class Coin {
+	public class Coin {
+		private int value;
+	}
+
+}

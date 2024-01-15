@@ -1,0 +1,7 @@
+package day0115;
+
+public class Message {
+	public String command;
+	public String to;
+
+}

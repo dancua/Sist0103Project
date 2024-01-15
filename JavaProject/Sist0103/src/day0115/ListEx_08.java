@@ -27,7 +27,7 @@ public class ListEx_08 {
 		String [] data = {"햄버거","피자","파스타"};
 		
 		//배열의 데이터를 리스트에 넣기
-		List<String > list = new Vector<String>();
+		List<String> list = new Vector<String>();
 		
 		for(String s: data)
 			list.add(s);

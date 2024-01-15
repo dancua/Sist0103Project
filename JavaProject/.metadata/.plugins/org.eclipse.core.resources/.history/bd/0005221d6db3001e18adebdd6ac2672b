@@ -1,0 +1,11 @@
+package day0115;
+
+import java.util.*;
+
+public class Book679_Que {
+
+	public static void main(String[] args) {
+			Queue<Message> mq = new LinkedList<Message>();
+	}
+
+}

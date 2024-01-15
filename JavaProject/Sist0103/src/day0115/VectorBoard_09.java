@@ -6,7 +6,7 @@ import java.util.Vector;
 
 public class VectorBoard_09 {
 	
-	List<Board_09> list = new Vector<Board_09>();
+	List<Board_09> list = new Vector<Board_09>(); // list 선언
 	//제네릭 유형을 클래스로 지정했으므르 데이터를 꺼내고 받을 때 클래스여야함
 	
 	// 입력메서드
@@ -14,7 +14,7 @@ public class VectorBoard_09 {
 		Scanner sc = new Scanner(System.in);
 		String writer,subject,content;
 		
-		System.out.println("작성자명?");
+		System.out.println("작성자명?"); // 스캐너를 통해 값 저장
 		writer = sc.nextLine();
 		System.out.println("제목?");
 		subject = sc.nextLine();

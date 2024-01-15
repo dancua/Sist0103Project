@@ -1,0 +1,18 @@
+package day0115;
+
+import java.util.*;
+
+public class Book679_Que {
+
+	public static void main(String[] args) {
+			Queue<Message> mq = new LinkedList<Message>();
+			
+			mq.offer(new Message("sendMail","홍길동"));
+			mq.offer(new Message("sendSMS","신용권"));
+			mq.offer(new Message("sendKakaotalk","감자바"));
+			
+			while(!mq.isEmpty())
+			
+	}
+
+}
