@@ -1,0 +1,39 @@
+package day0115;
+
+abstract class Game{
+	abstract public void play();
+	abstract public void stop();
+}
+///////////////////////////////
+class Kim extends Game{
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+///////////////////////////////
+class Lee extends Game{
+	
+}
+///////////////////////////////
+class Choi{
+	
+}
+
+public class AbstractReview_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

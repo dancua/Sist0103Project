@@ -1,0 +1,54 @@
+package day0115;
+
+interface Command{
+	public void write(); 
+		
+}
+class Insert implements Command{
+
+	@Override
+	public void write() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+//////////////////////////
+class List implements Command{
+
+	@Override
+	public void write() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+////////////////////////////
+class Modify implements Command{
+
+	@Override
+	public void write() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+///////////////////////////
+class Delete implements Command{
+
+	@Override
+	public void write() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+//////////////////////////
+public class InheritBoard {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

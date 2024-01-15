@@ -1,0 +1,15 @@
+package day0115;
+
+import java.util.List;
+
+public class ListEx_07 {
+
+	public static void main(String[] args) {
+		// 1.순차적으로 데이터 들어간다
+		// 2.중복데이터도 허용한다.
+		// 3.처음 생성시 일정한 갯수로 생성되는데 그이상의 데이터를 넣으면 자동으로 공간이 늘어남.
+		
+		List<String>
+	}
+
+}

@@ -1,0 +1,10 @@
+package day0115;
+
+public class SetRandom {
+
+	public static void main(String[] args) {
+		// Set,random이용해서 1~45의 서로다른난수 6개
+
+	}
+
+}

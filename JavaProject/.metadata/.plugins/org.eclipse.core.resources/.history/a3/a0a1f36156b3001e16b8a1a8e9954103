@@ -1,0 +1,20 @@
+package day0115;
+
+import java.util.List;
+import java.util.Vector;
+
+public class VectorBoard_09 {
+	
+	List<Board_09> list = new Vector<Board_09>();
+	// 입력메서드
+	
+	
+	
+	// 출력
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

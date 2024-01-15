@@ -1,0 +1,23 @@
+package day0115;
+
+import java.util.*;
+
+public class SetEx_05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Set<Integer> set1 = new HashSet<Integer>();
+		set1.add(5);
+		set1.add(4);
+		set1.add(15);
+		set1.add(25);
+		set1.add(35);
+		set1.add(5);
+		
+		System.out.println("갯수: " + set1.size());
+		
+		
+	}
+
+}

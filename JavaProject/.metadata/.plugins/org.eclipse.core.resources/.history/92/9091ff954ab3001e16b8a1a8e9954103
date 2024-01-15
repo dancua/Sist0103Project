@@ -1,0 +1,14 @@
+package day0115;
+
+import java.util.*;
+
+public class SetEx_05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Set<Integer> set1 = new HashSet<Integer>();
+		set1.add(5);
+	}
+
+}

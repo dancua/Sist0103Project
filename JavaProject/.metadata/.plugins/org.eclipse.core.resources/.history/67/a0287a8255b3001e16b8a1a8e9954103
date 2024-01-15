@@ -1,0 +1,8 @@
+package day0115;
+
+public class Board_09 {
+	
+	private String writer;
+	
+
+}

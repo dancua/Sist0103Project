@@ -91,12 +91,16 @@ class Quiz{
 		}
 	}	
 }
-public class QuizMain {
 
-	
-	
-	
+public class QuizMain {
 		
+		public static void writeData(Quiz[] arr) {
+			// Quiz.showTitle
+		
+			System.out.println();
+
+		}
+
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -121,7 +125,6 @@ public class QuizMain {
 			int oracle = Integer.parseInt(sc.nextLine()); 
 			System.out.println("HTML 점수는?");
 			int html =Integer.parseInt(sc.nextLine()); 
-			
 		}
 	}
 }

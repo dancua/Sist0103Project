@@ -16,5 +16,13 @@
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="day0110.GetInstance_15"/>
     <fullyQualifiedTypeName name="day0111.Person"/>
+    <fullyQualifiedTypeName name="day0111.Emp"/>
+    <fullyQualifiedTypeName name="day0112.Food"/>
+    <fullyQualifiedTypeName name="day0112_1.Sawon_05"/>
+    <fullyQualifiedTypeName name="day0112.Emart"/>
+    <fullyQualifiedTypeName name="day0112.KangnamEmart"/>
+    <fullyQualifiedTypeName name="day0112.School"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="day0112.Fruit"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

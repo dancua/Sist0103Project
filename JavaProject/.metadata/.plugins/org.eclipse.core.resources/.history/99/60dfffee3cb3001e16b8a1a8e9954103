@@ -1,0 +1,26 @@
+package day0115;
+
+interface InterAA{
+	
+	public void play();
+}
+//class ClassA{	
+//////////////////////
+interface InterBB{
+	
+	public void draw();
+}
+///////////////////////
+class InterImple{
+	
+}
+public class InheritReview_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	}
+	
+
+}
