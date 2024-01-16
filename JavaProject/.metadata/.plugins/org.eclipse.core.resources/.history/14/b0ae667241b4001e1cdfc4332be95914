@@ -1,0 +1,43 @@
+package day0116;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FruitShop {
+	
+	public static void fruit() throws FileNotFoundException,IOException
+	{
+		String fileName ="C:\\sist0103\\file\\fruitShop";
+		FileReader fr = null;
+		BufferedReader br = null;
+		int cnt = 0;
+		String fruitName;
+		int su=0;
+		int dan=0;
+		int total=0;
+		
+		fr = new FileReader(fileName);
+		System.out.println("**과일입고 목록**");
+		
+		br = new BufferedReader(fr);
+		
+		while(true)
+		{
+			String n = br.readLine();
+			
+			if(n==null)
+				break;
+			
+			cnt++;
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package day0116;
+
+import java.io.*;
+
+public class FileTokenException_14 {
+
+	public static void fileRead()
+	{
+		String fName="C:\\sist0103\\file\\info";
+		FileReader fr = null;
+		BufferedReader br = null;
+		
+		try {
+			fr= new FileReader(fName);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
