@@ -1,0 +1,24 @@
+package day0117;
+
+import java.io.*;
+
+public class FileWriter_03 {
+
+	public static void fileWrite()
+	{
+		FileWriter fw = null;
+		String fileName ="C:\\sist0103\\file\\test1.txt";
+		
+		try {
+			fw = new FileWriter(fileName); // 파일 새로 생성
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

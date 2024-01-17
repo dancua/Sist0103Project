@@ -25,15 +25,18 @@ public class FileTokenException_14 {
 				if(s==null)
 					break;
 				//split으로 분리
-				//String [] data = s.split(",");
+				String [] data = s.split(",");
 				//배열갯수만큼 출력
-				//System.out.println(data[0]+"\t"+data[1]+"\t"+data[2]);
-				
+				System.out.println(data[0]+"\t"+data[1]+"\t"+data[2]);
+			
+				/*
 				//이번에는 StringTokeneizer를 이용해서 분리
 				StringTokenizer st = new StringTokenizer(s,",");
 				
 				System.out.println(st.nextToken()+ "\t"+ st.nextToken() + "\t"+st.nextToken()+"세");
+			*/
 			}
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

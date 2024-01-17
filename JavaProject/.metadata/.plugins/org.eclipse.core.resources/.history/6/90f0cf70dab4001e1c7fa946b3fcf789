@@ -1,0 +1,17 @@
+package day0117;
+
+import java.util.*;
+import java.io.*;
+
+public class FWriter_04 {
+
+	Scanner sc;
+	FileWriter fw;
+	static final String FILENAME="";
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
