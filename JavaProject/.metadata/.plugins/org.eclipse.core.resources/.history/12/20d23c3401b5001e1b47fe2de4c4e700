@@ -1,0 +1,14 @@
+package day0117;
+
+public class MyShopList_07 {
+	
+	static final String FILENAME = "C:\\sist0103\\file\\myshop.txt";
+	List<MyShop> list = Vector<MyShop>();
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,57 @@
+package day0117;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.*;
+import java.io.*;
+
+
+public class MyShopList_07 {
+	
+	static final String FILENAME = "C:\\sist0103\\file\\myshop.txt";
+	List<MyShop> list =new ArrayList<MyShop>();
+	Scanner sc = new Scanner(System.in);
+	
+	public MyShopList_07() {
+		shopFileRead();
+	}
+	
+	//파일읽기
+	public void shopFileRead()
+	{
+		FileReader fr = null;
+		BufferedReader br = null;
+		FileWriter fw = null;
+		
+		try {
+			fr = new FileReader(FILENAME);
+			br = new BufferedReader(fr);
+			
+			while(true)
+			{
+				String b = br.readLine();
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+		} catch(IOException e) {
+			
+		}
+		
+		
+		
+	}
+	
+	
+	//파일쓰기
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
