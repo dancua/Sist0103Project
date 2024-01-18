@@ -1,0 +1,11 @@
+package day0118;
+
+public class SwingArrEvent_08 extends JFrame{
+
+	container cp;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

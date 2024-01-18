@@ -1,0 +1,29 @@
+package day0118;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class SwingArrEvent_08 extends JFrame{
+
+	Container cp;
+	JButton [] btn = new JButton[6];
+	String p[] btnLabel= {"Red","Magenta","Blue","Green","Yellow","Gray"};  
+	
+	public SwingArrEvent_08(String title) {
+		super(title);
+
+		cp = this.getContentPane();
+		
+		this.setBounds(300, 100, 600, 300);
+		cp.setBackground(new Color(153,102,250));
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new SwingArrEvent_08("스윙기본");
+	}
+
+}

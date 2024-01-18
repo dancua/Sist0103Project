@@ -1,0 +1,24 @@
+package day0118;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JFrame;
+
+public class SwingImageIcon_06 extends JFrame{
+
+	public static void main(String[] args) {
+		Container cp;	
+
+		public SwingStart(String title) {
+			super(title);
+
+			cp = this.getContentPane();
+			
+			this.setBounds(300, 100, 300, 300);
+			cp.setBackground(new Color(153,102,255));
+			this.setVisible(true);
+		}
+	}
+
+}

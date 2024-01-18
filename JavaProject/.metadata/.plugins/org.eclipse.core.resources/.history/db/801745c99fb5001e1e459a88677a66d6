@@ -1,0 +1,24 @@
+package day0118;
+
+import javax.swing.JFrame;
+import javax.swing.*;
+
+public class SwingGibon_01 extends JFrame {
+
+	public SwingGibon_01(String title) {
+		super(title);
+
+		// 시작위치,너비,높이
+		this.setBounds(500, 100, 300, 300);
+		//배경색
+		this.getBackground()
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new SwingGibon_01("스윙기본");
+
+	}
+
+}

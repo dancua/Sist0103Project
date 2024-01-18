@@ -1,0 +1,14 @@
+package day0118;
+
+import java.awt.Container;
+
+public class SwingLay_03 {
+	
+	Container cp;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

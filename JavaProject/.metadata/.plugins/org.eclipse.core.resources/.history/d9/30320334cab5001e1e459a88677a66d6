@@ -1,0 +1,14 @@
+package day0118;
+
+import java.awt.Container;
+
+public class SwingComponent_09 extends JFrame{
+	
+	Container cp;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
