@@ -48,7 +48,7 @@ public class Quiz_11 extends JFrame implements ActionListener {
 
 			btn[i] = new JButton(btnLabel[i]);
 
-			btn[i].setBackground(btnColor[i]);
+			btn[i].setBackground(btnColors[i]);
 
 			btn[i].addActionListener(this);
 

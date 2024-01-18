@@ -15,16 +15,13 @@ import javax.swing.*;
  * 위의 5개 버튼을 누를 때마다 안녕하세요 글자색상은 버튼을 누른 해당 색상으로 바뀐다.
  * 
  */
-import javax.swing.border.TitledBorder;
-import javax.swing.plaf.FontUIResource;
 
 public class Quiz_11 extends JFrame implements ActionListener {
 
 	Container cp;
 	JButton[] btn = new JButton[5];
 	String[] btnLabel = { "Red", "Green", "Blue", "Magenta", "Yellow" };
-	Color[] btnColor = { Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.YELLOW };
-	JLabel  lbl;
+	Color[] btnColors = { Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.YELLOW };
 
 	public Quiz_11(String title) {
 		super(title);
@@ -41,31 +38,24 @@ public class Quiz_11 extends JFrame implements ActionListener {
 		// Panel은 기본이 FlowLayout
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.ORANGE);
-		
+
 		this.add(panel, BorderLayout.NORTH); 
 
 		for (int i = 0; i < btn.length; i++) {
 
 			btn[i] = new JButton(btnLabel[i]);
 
-			btn[i].setBackground(btnColor[i]);
+			btn[i].setBackground(btnColors[i]);
 
 			btn[i].addActionListener(this);
 
-			panel.add(btn[i]);	
+			panel.add(btn[i]);
 		}
-		lbl = new JLabel("안녕하세요");
-		lbl.setBounds(20, 20, 50, 30);
-		lbl.setFont(new FontUIResource("", Font.BOLD, 30));
-		this.add(lbl);
-		
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// 로직 작성
-		Object ob = e.getSource();
-		
 		for(int i = 0; i < btn.length; i++) {
 			
 			
