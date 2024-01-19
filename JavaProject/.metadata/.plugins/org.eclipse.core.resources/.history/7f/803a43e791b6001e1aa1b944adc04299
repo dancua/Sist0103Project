@@ -1,0 +1,17 @@
+package day0119;
+
+import java.awt.Container;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+public class FileDialog_06 extends JFrame implements ActionListener {
+	
+	Container cp;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

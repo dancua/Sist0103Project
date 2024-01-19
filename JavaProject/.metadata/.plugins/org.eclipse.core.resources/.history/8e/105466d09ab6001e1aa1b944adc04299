@@ -1,0 +1,39 @@
+package day0119;
+
+
+import javax.swing.*;
+
+import day0118.SwingBtnEvent_05;
+
+import java.awt.*;
+import java.io.*;
+
+public class Combo_07 extends JFrame {
+	
+	JComboBox<String> combo;
+	String [] names = {"박나래","전현무","덱스","기안"};
+	JTextField tf
+	Container cp;
+	
+	public Combo_07(String title) {
+		super(title);
+//		cp = this.getContentPane();	
+		this.setBounds(270, 100, 500, 500);
+		cp.setBackground(new Color(153,102,255));
+//		this.getContentpane().setBackground(new Color(153,102,255));
+		
+		initDesign();
+		this.setVisible(true);
+	}
+	
+	public void initDesign()
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new SwingBtnEvent_05("콤보박스7");
+	}
+
+}
