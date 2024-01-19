@@ -24,7 +24,7 @@ public class Quiz_11 extends JFrame implements ActionListener {
 	JButton[] btn = new JButton[5];
 	String[] btnLabel = { "Red", "Green", "Blue", "Magenta", "Yellow" };
 	Color[] btnColor = { Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.YELLOW };
-	JLabel  lbl;
+	JLabel lbl;
 
 	public Quiz_11(String title) {
 		super(title);
@@ -32,17 +32,17 @@ public class Quiz_11 extends JFrame implements ActionListener {
 		cp = this.getContentPane();
 
 		this.setBounds(300, 100, 600, 300);
-		cp.setBackground(new Color(153,100,200));
+		cp.setBackground(new Color(153, 100, 200));
 		initDesign();
 		this.setVisible(true);
 	}
 
 	public void initDesign() {
-		// Panel은 기본이 FlowLayout
+
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.ORANGE);
-		
-		this.add(panel, BorderLayout.NORTH); 
+
+		this.add(panel, BorderLayout.NORTH);
 
 		for (int i = 0; i < btn.length; i++) {
 
@@ -52,33 +52,31 @@ public class Quiz_11 extends JFrame implements ActionListener {
 
 			btn[i].addActionListener(this);
 
-			panel.add(btn[i]);	
+			panel.add(btn[i]);
 		}
 		lbl = new JLabel("안녕하세요");
 		lbl.setBounds(20, 20, 50, 30);
 		lbl.setFont(new FontUIResource("", Font.BOLD, 30));
 		this.add(lbl);
-		
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// 로직 작성
 		Object ob = e.getSource();
-		
-		for(int i = 0; i < btn.length; i++) {
-			
-			
-		}
-		
-		
 
+		for (int i = 0; i < btn.length; i++) {
+			if(ob==btn[i]) {
+			lbl.setOpaque(true);
+			lbl.setBackground(new Color(153, 100, 200));
+			lbl.setForeground(btnColor[i]);
+			this.setTitle("Color: "+btnLabel[i]);
+			}
+		}
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new Quiz_11("퀴즈");
 	}
-
-	
 
 }
