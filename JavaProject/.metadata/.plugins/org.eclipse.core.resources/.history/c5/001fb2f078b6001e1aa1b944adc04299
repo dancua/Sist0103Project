@@ -1,0 +1,33 @@
+package day0119;
+
+import java.awt.Color;
+import java.awt.Container;
+import javax.swing.JFrame;
+
+public class SwingTable_04 extends JFrame {
+	
+	Container cp;
+	
+	JTable table;
+	public SwingTable_04(String title) {
+		super(title);
+
+		cp = this.getContentPane();
+		
+		this.setBounds(270, 100, 500, 500);
+		cp.setBackground(new Color(153,102,255));
+		
+		initDesign();
+		this.setVisible(true);
+	}
+	
+	public void initDesign()
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		new SwingTable_04("버튼이벤트5");
+	}
+
+}

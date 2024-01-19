@@ -1,0 +1,14 @@
+package day0119;
+
+import java.awt.Container;
+
+public class CheckRadio_03 {
+	
+	Container cp;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

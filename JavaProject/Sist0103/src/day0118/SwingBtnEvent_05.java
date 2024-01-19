@@ -15,7 +15,7 @@ public class SwingBtnEvent_05 extends JFrame implements ActionListener {
 
 		cp = this.getContentPane();
 		
-		this.setBounds(300, 100, 300, 300);
+		this.setBounds(270, 100, 500, 500);
 		cp.setBackground(new Color(153,102,255));
 		
 		initDesign();
