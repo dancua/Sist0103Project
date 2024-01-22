@@ -1,4 +1,4 @@
-package day0118;
+/*package day0118;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -84,3 +84,4 @@ public class SwingImageIcon_06 extends JFrame implements ActionListener{
 	
 
 }
+*/

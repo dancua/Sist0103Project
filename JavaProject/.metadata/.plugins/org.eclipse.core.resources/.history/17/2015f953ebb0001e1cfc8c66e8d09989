@@ -1,8 +1,0 @@
-package day0112;
-
-public class SuperOb_03 {
-
-	String name;
-	int age;
-	
-}

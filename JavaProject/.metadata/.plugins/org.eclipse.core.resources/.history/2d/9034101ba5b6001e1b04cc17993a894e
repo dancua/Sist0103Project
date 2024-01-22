@@ -1,0 +1,68 @@
+package day0119;
+
+import java.awt.*;
+import javax.swing.*;
+import java.io.*;
+import java.awt.event.*;
+public class Quiz_0119 extends JFrame implements ActionListener,ItemListener{
+	
+	Container cp;
+	JCheckBox cb;
+	JCheckBox [] cbTrip = new JCheckBox[4];
+	JRadioButton rb;
+	JRadioButton [] rbColor = new JRadioButton[3];
+	JLabel lbl;
+	JButton btn;
+	
+	
+	public Quiz_0119(String title) {
+		super(title);
+
+		cp = this.getContentPane();
+
+		this.setBounds(270, 100, 500, 500);
+		cp.setBackground(new Color(153, 102, 255));
+
+		initDesign();
+		this.setVisible(true);
+	}
+
+	public void initDesign() {
+		this.setLayout(null);
+		
+		//남자 여자 바뀌는 체크박스
+		cb = new JCheckBox("남자");
+		cb.setBounds(20, 20, 100, 30);
+		cb.setOpaque(false);
+		cb.addItemListener(this); 
+		
+		this.add(cb);
+		
+		String[] trips = {"일본","필리핀","독일","미국"};
+		int xpos = 20;
+		for(int i = 0; i < cbTrip.length; i++) {
+			cbTrip[i] = new JCheckBox(trips[i]);
+			cbTrip[i].setBounds(xpos, 100, 80, 30);
+			cbTrip[i].setOpaque(false);
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

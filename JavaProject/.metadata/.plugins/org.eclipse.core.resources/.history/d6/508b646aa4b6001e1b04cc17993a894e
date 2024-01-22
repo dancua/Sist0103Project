@@ -1,0 +1,56 @@
+package day0119;
+
+import java.awt.*;
+import javax.swing.*;
+import java.io.*;
+import java.awt.event.*;
+public class Quiz_0119 extends JFrame implements ActionListener,ItemListener{
+	
+	Container cp;
+	JCheckBox cb;
+	JCheckBox [] cbTrip = new JCheckBox[4];
+	JRadioButton rb;
+	JRadioButton [] rbColor = new JRadioButton[3];
+	JLabel lbl;
+	JButton btn;
+	
+	
+	public Quiz_0119(String title) {
+		super(title);
+
+		cp = this.getContentPane();
+
+		this.setBounds(270, 100, 500, 500);
+		cp.setBackground(new Color(153, 102, 255));
+
+		initDesign();
+		this.setVisible(true);
+	}
+
+	public void initDesign() {
+		this.setLayout(null);
+		
+		cb = new JCheckBox("남자");
+		cb.setBounds(20, 20, 100, 30);
+		cbDriver.setOpaque(false);
+		cbDriver.addItemListener(this); //ItemListener이벤트 핸들러와 연결되는 객체임을 표시
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
