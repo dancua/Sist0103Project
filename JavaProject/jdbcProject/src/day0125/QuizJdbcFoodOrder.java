@@ -10,57 +10,54 @@ public class QuizJdbcFoodOrder {
 	
 	static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
 	
-	public void connectSawon()
+	public void foodshop()
 	{
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		String sql ="select * from sawon order by num";
-		
-		try {
-			conn = DriverManager.getConnection(URL, "stu", "a1234");
-			
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery(sql);
-			
-//			여러줄을 가져올때는 while문으로 가져온다.
-//			rs.next() : 다음데이터로 이동하면서 true반환 더이상 데이터가 없으면 false반환
-			while(rs.next())
-			{
-//				db로부터 데이터 가져오기
-			int num	= rs.getInt("num");
-			String name = rs.getString("name");
-			String gender =rs.getString("gender");
-			String buseo = rs.getString("buseo");
-			int pay = rs.getInt("pay");
-			
-			System.out.println(num + "\t" + name + "\t" + gender + "\t" + buseo + "\t" + pay);	
-			}
-			
-			System.out.println("오라클 드라이버 연결 성공");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("오라클 드라이버 연결 실패");
-		}finally {
-		
-		}
-			   try {
-				   if(rs!=null)	rs.close();
-				   if(stmt!= null) stmt.close();
-				   if(conn!= null) conn.close();
+		String sql = "select j.order_num , f.fno 주문번호 , j.order_name , f.food_name , f.price , f.shop_name ,f.shop_loc ,j.order_addr  from foodshop f,jumun j where f.fno = j.fno";		
+			try {
+				conn =DriverManager.getConnection(URL, "stu", "a1234");
+				
+				stmt = conn.createStatement();
+				rs = stmt.executeQuery(sql);
+				System.out.println("***배달 현황판***");
+				System.out.println("주문번호\t음식번호\t주문자\t\t음식명\t\t가격\t상호명\t상점위치\t주문자위치");
+				System.out.println("----------------------------------------------------------------------------------------");
+				while(rs.next()) 
+				{
+					int order_num = rs.getInt("order_num");
+					int fno = rs.getInt("주문번호");
+					String order_name = rs.getString("order_name");
+					String food_name = rs.getString("food_name");
+					int price = rs.getInt("price");
+					String shop_name = rs.getString("shop_name");
+					String shop_loc = rs.getString("shop_loc");
+					String order_addr = rs.getString("order_addr");
+					
+					System.out.println(order_num + "\t\t" + fno + "\t\t" + order_name + "\t" + food_name + "\t" + price + "\t" + shop_name + "\t" + shop_loc + "\t" + order_addr);
+					
+				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} 
+			}finally {
+				try {
+					rs.close();
+					stmt.close();
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 	}
 	
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ConnectTest ct = new ConnectTest();
-		ct.connectSawon();
+		QuizJdbcFoodOrder ct = new QuizJdbcFoodOrder();
+			ct.foodshop();
 	}
 
 }
