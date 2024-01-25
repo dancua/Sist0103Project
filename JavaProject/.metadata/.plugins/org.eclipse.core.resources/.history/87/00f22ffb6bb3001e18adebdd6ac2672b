@@ -1,8 +1,0 @@
-package day0115;
-
-public class Coin {
-	
-		private int value;
-	}
-
-}

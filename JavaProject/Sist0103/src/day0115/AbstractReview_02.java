@@ -36,7 +36,7 @@ class Lee extends Game{
 	
 }
 ///////////////////////////////
-class Choi extends Game{
+class Choi extends Lee{
 
 	@Override
 	public void play() {

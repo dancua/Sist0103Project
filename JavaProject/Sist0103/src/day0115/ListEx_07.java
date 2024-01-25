@@ -18,17 +18,13 @@ public class ListEx_07 {
 		System.out.println("초기할당크기: " + list.capacity());
 		
 		list.add("장미");
-		list.add("장미");
 		list.add("수국");
 		list.add("프리지아");
 		list.add("안개");
 		list.add("장미");
-		list.add("장미");
-		list.add("장미");
 		list.add("수국");
 		list.add("프리지아");
 		list.add("안개");
-		list.add("장미");
 		
 		System.out.println("초기데이터갯수: "+ list.size());
 		System.out.println("초기할당크기: " + list.capacity());
