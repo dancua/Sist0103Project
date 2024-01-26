@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="day0116.OuterObj.innerObj"/>
-    <fullyQualifiedTypeName name="day0116.Outer.Inner2"/>
-    <fullyQualifiedTypeName name="day0116.Outer"/>
-    <fullyQualifiedTypeName name="day0116.Outer.Inner1"/>
     <fullyQualifiedTypeName name="day0116.AbEx"/>
     <fullyQualifiedTypeName name="java.lang.ClassCastException"/>
     <fullyQualifiedTypeName name="day0116.SawonOuter.InputInner"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 </qualifiedTypeNameHistroy>
