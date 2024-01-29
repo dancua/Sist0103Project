@@ -66,7 +66,7 @@ public class Quiz {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			db.dbClose(stmt, conn);
+			db.dbClose(rs,stmt, conn);
 		}
 	}
 	public void delete() {
@@ -205,14 +205,16 @@ sql  = "update stuinfo set s_name =' "+name+" ',s_gender =' "+gender+" ',s_age =
 		stmt = conn.createStatement();
 		rs = stmt.executeQuery(sql);
 		
+		System.out.println("시퀀스\t학생명\t성별\t나이\t연락처\t\t가입날짜");
+		System.out.println("-------------------------------------------------------------");
+		
 		while(rs.next()) {
 			String name = rs.getString("s_name");
-			
-			System.out.println("시퀀스\t학생명\t성별\t나이\t연락처\t\t가입날짜");
-			System.out.println("-------------------------------------------------------------");
+			if(name.contains(n)) {
 				flag = true;
 			System.out.println(rs.getInt("s_no")+"\t"+rs.getString("s_name") + "\t" + rs.getString("s_gender") 
 			+"\t" +  rs.getInt("s_age")+ "\t" + rs.getString("s_hp") +"\t"+ rs.getDate("gaipday") );
+			}
 		}
 		if(!flag) {
 			System.out.println("해당 이름에 대한 정보가 없습니다.");
