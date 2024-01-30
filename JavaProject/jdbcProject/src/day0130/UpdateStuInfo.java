@@ -1,7 +1,7 @@
 package day0130;
 
 import java.awt.Color;
-import java.awt.Container;import java.nio.channels.IllegalBlockingModeException;
+import java.awt.Container;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -9,25 +9,26 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class AddStuInfo extends JFrame{
-	
+public class UpdateStuInfo extends JFrame {
+
 	Container cp;
 	JTextField tfName,tfJava,tfJsp,tfSpring;
 	JComboBox<String> cbBan;
-	JButton btnAdd;
+	JButton btnUpdate;
+	String num;
 	
-	public AddStuInfo(String title) {
+	public UpdateStuInfo(String title) {
 		super(title);
 		
 		cp = this.getContentPane();
 		this.setBounds(270,100,200,250);
-		cp.setBackground(new Color(255,255,200));
+		cp.setBackground(new Color(153,100,0));
 		initDesing();
 //		this.setVisible(true);
 	}
 	public void initDesing() 
 	{
-		this.setLayout(null);
+this.setLayout(null);
 		
 		JLabel lblTitle1 = new JLabel("이름");
 		JLabel lblTitle2 = new JLabel("반");
@@ -42,7 +43,7 @@ public class AddStuInfo extends JFrame{
 		
 		String [] ban = {"aws반","front반","backend반","design반"};
 		cbBan = new JComboBox<String>(ban);
-		btnAdd = new JButton("추가");
+		btnUpdate = new JButton("수정");
 		
 		lblTitle1.setBounds(30,10,60,30);
 		this.add(lblTitle1);
@@ -72,15 +73,14 @@ public class AddStuInfo extends JFrame{
 		this.add(tfSpring);
 		
 //		버튼
-		btnAdd.setBounds(70,170,70,30);
-		this.add(btnAdd);
+		btnUpdate.setBounds(70,170,70,30);
+		this.add(btnUpdate);
 		
 		}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new AddStuInfo("학생정보추가프레임");
-
+		new	UpdateStuInfo("학생정보 수정페이지"); 
 	}
 
 }
