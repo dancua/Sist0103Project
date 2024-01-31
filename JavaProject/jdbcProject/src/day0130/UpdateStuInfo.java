@@ -75,8 +75,8 @@ this.setLayout(null);
 //		버튼
 		btnUpdate.setBounds(70,170,70,30);
 		this.add(btnUpdate);
-		
 		}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
