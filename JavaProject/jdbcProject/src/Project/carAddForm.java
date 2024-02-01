@@ -157,14 +157,14 @@ public class carAddForm extends JFrame implements ActionListener {
 			photoDraw.repaint();
 		}else if (ob==btnInsert)
 		{
-//			shopDto 생성
+//			carDTO 생성
 			carDTO dto = new carDTO();
 			
 //			dto에 8의 데이터를 넣는다.
 				dto.setC_name(tfName.getText());
 	            dto.setCarImage(imageName);
 	            dto.setC_price(Integer.parseInt(tfPrice.getText()));
-	            dto.setC_fe(Integer.parseInt(tfFe.getText()));
+	            dto.setC_fe(Double.parseDouble(tfFe.getText()));
 	            dto.setC_fuel(tfFuel.getText());
 	            dto.setC_level(tfLevel.getText());
 	            dto.setC_ap(tfAp.getText());
@@ -173,6 +173,8 @@ public class carAddForm extends JFrame implements ActionListener {
 	            dao.insert(dto);
 
 	            this.setVisible(false);
+	            new carListForm();
+	            dispose();
 	        }
 	    }
 	public static void main(String[] args) {

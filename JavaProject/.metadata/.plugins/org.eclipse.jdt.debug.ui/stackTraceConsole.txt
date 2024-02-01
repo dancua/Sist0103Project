@@ -1,8 +1,7 @@
-super(title);
-
-		cp = this.getContentPane();
+JLabel lbl4 = new JLabel("АЁАн");
+		lbl4.setBounds(30, 200, 50, 30);
+		this.add(lbl4); 
 		
-		this.setBounds(300, 100, 300, 300);
-		cp.setBackground(new Color(153,102,255));
-		this.setVisible(true);
-	}
+		tfDan = new JTextField();
+		tfDan.setBounds(110, 200, 50, 30);
+		this.add(tfDan);

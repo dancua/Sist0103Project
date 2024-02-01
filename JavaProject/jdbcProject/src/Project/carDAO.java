@@ -86,7 +86,7 @@ public class carDAO extends JFrame {
 	}
 	
 //	삭제
-	public void delete(String num)
+	public boolean delete(String num)
 	{
 		Connection conn = db.getOracle();
 		PreparedStatement pstmt = null;
@@ -104,15 +104,35 @@ public class carDAO extends JFrame {
 		}finally {
 			db.dbClose(pstmt, conn);
 			
-		}	
+		}
+		return false;	
 	}
+	 public boolean authenticate(String num, String c_name) {
+	        Connection conn = null;
+	        PreparedStatement pstmt = null;
+	        ResultSet rs = null;
+
+	        try {
+	            conn = db.getOracle();
+	            String sql = "SELECT * FROM carManage WHERE num = ? and c_name = ?";
+	            pstmt = conn.prepareStatement(sql);
+	            pstmt.setString(1, num);
+	            pstmt.setString(2, c_name);
+	            rs = pstmt.executeQuery();
+
+	            return rs.next(); // ����� ������ ���� ����
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	            return false; // ���� ����
+	        }
+	    }
 	
 	// 수정
-	public void update(carDTO dto) {
+	public boolean update(carDTO dto) {
 	    Connection conn = db.getOracle();
 	    PreparedStatement pstmt = null;
 
-	    String sql = "update carManage set c_name=?, c_price=?, c_fe=?, c_fuel=?, c_level=?, c_ap=?, maintain=? where num=?";
+	    String sql = "update carManage set c_name=?, c_price=?, c_fe=?, c_fuel=?, c_level=?, c_ap=?, c_maintain=? where num=?";
 
 	    try {
 	        pstmt = conn.prepareStatement(sql);
@@ -132,5 +152,6 @@ public class carDAO extends JFrame {
 	    } finally {
 	        db.dbClose(pstmt, conn);
 	    }
+		return false;
 	}
 }
