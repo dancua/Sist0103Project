@@ -1,12 +1,11 @@
 package Project;
 
-import javax.swing.JFrame;
-import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class carAddForm extends JFrame implements ActionListener {
 	
@@ -170,13 +169,19 @@ public class carAddForm extends JFrame implements ActionListener {
 	            dto.setC_ap(tfAp.getText());
 	            dto.setC_maintain(tfMaintain.getText());
 
-	            dao.insert(dto);
+	            boolean cars = dao.insert(dto);
+
+	            if (cars) {
+	                JOptionPane.showMessageDialog(null, "차량 정보가 등록되었습니다.");
+	            } else {
+	                JOptionPane.showMessageDialog(null, "등록 중 오류가 발생했습니다.");
+	            }
 
 	            this.setVisible(false);
 	            new carListForm();
 	            dispose();
 	        }
-	    }
+	}
 	public static void main(String[] args) {
 		
 		new carAddForm();

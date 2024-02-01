@@ -17,7 +17,7 @@ public class carDAO extends JFrame {
 	DBConnect db = new DBConnect();
 	
 //	추가
-	public void insert(carDTO dto)
+	public boolean insert(carDTO dto) 
 	{
 		Connection conn = db.getOracle();
 		PreparedStatement pstmt = null;
@@ -44,6 +44,7 @@ public class carDAO extends JFrame {
 			db.dbClose(pstmt, conn);
 			
 		}
+		return false;
 	}
 //	전체조회
 	public Vector<carDTO> select() 

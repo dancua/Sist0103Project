@@ -58,10 +58,6 @@ public class carDelForm extends JFrame {
 		} else {
 		    JOptionPane.showMessageDialog(null, "삭제 중 오류가 발생했습니다.");
 		}	
-		
-		this.setVisible(false);
-		new carListForm();
-		 dispose();
     }
 
     public static void main(String[] args) {
