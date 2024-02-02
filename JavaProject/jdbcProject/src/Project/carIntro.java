@@ -17,7 +17,7 @@ public class carIntro extends JFrame {
     public carIntro() {
         super("차 관리 페이지");
 
-        ImageIcon imageIcon = new ImageIcon("C:\\sist0103\\image\\carImage\\image.jpg");
+        ImageIcon imageIcon = new ImageIcon("C:\\sist0103\\image\\carImage\\시작.jpg");
         int imageWidth = imageIcon.getIconWidth();
         int imageHeight = imageIcon.getIconHeight();
 
@@ -28,18 +28,19 @@ public class carIntro extends JFrame {
     }
 
     public void initDesign() {
-        JLabel background = new JLabel(new ImageIcon("C:\\sist0103\\image\\carImage\\image.jpg"));
+        JLabel background = new JLabel(new ImageIcon("C:\\sist0103\\image\\carImage\\시작.jpg"));
         background.setBounds(0, 0, getWidth(), getHeight()); 
 
         btnIntro = new JButton("프로그램 시작");
         
         btnIntro.setPreferredSize(new Dimension(120, 30));
         
-        btnIntro.setBounds(getWidth() / 2 - 60, getHeight() - 50, 120, 30); 
+        btnIntro.setBounds(getWidth() / 2 - 100, getHeight() - 100, 120, 30); 
         btnIntro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new carListForm();
+                dispose();
             }
         });
 

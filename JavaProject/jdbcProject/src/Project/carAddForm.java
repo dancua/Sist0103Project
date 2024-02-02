@@ -112,7 +112,7 @@ public class carAddForm extends JFrame implements ActionListener {
         lblPhoto = new JLabel("이미지명");
         lblPhoto.setBorder(new LineBorder(Color.pink));
         lblPhoto.setBounds(20, 120, 300, 30);
-        this.add(lblPhoto);
+//        this.add(lblPhoto);
 		
 //		차 등록버튼
 		btnInsert = new JButton("차량 등록");
@@ -158,7 +158,7 @@ public class carAddForm extends JFrame implements ActionListener {
 		{
 //			carDTO 생성
 			carDTO dto = new carDTO();
-			
+
 //			dto에 8의 데이터를 넣는다.
 				dto.setC_name(tfName.getText());
 	            dto.setCarImage(imageName);

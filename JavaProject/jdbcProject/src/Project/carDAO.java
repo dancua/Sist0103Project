@@ -74,6 +74,7 @@ public class carDAO extends JFrame {
 				dto.setC_level(rs.getString("c_level"));
 				dto.setC_ap(rs.getString("c_ap"));
 				dto.setC_maintain(rs.getString("c_maintain"));
+				dto.setCarImage(rs.getString("carImage"));
 
 //				list에 dto추가
 				list.add(dto);

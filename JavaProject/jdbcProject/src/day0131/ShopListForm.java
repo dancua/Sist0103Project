@@ -65,6 +65,7 @@ public class ShopListForm extends JFrame{
 				
 //				list에서 rw에 해당하는 dto를 꺼내서 거기에서 이미지명을 얻는다				
 				imageName = list.get(row).getPhoto();
+				  System.out.println("Image Name: " + imageName);
 				
 				draw.repaint();
 				super.mouseClicked(e);
@@ -93,6 +94,7 @@ public class ShopListForm extends JFrame{
 //			테이블 모델에 추가
 			model.addRow(data);
 			
+			System.out.println(data);
 		}
 		
 	}

@@ -22,7 +22,7 @@ public class carDelForm extends JFrame {
     private void initDesign() {
         setLayout(null);
 
-        JLabel lbl1 = new JLabel("삭제할 시퀀스:");
+        JLabel lbl1 = new JLabel("삭제할 차량번호:");
         lbl1.setBounds(10, 10, 120, 20);
         tfNum = new JTextField();
         tfNum.setBounds(140, 10, 150, 20);

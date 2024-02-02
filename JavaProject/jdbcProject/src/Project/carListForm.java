@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-import day0131.shopDto;
+import Project.carDTO;
 
 // 		2번째 화면 
 
@@ -54,6 +54,7 @@ public class carListForm extends JFrame{
 		this.setLayout(null);
 		list = dao.select();
 		
+		
 //		table
 		String [] title = {"No.","차량명","가격","연비","연료","차급","외형","정비이력"};
 		model = new DefaultTableModel(title,0);
@@ -71,21 +72,19 @@ public class carListForm extends JFrame{
 		
 		
 //		출력된 데이터 이벤트..익명내부클래스
-		table .addMouseListener(new MouseAdapter() {
-		
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-//				행번호얻기
-				int row = table.getSelectedRow();
-				
-//				list에서 row에 해당하는 dto를 꺼내서 거기에서 이미지명을 얻는다				
-				imageName = list.get(row).getCarImage();
-				
-				draw.repaint();
-				super.mouseClicked(e);
-			}
-		});		
+		table.addMouseListener(new MouseAdapter() {
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+		        int row = table.getSelectedRow();
+		        imageName = list.get(row).getCarImage();
+
+		        System.out.println("Image Name: " + imageName);
+
+		        draw.repaint();
+		        super.mouseClicked(e);
+		    }
+		});
+	
 		
 		JButton btnAdd = new JButton("추가");
         btnAdd.setBounds(60, 330, 80, 30);
@@ -152,10 +151,11 @@ public class carListForm extends JFrame{
 			data.add(dto.getC_level());
 			data.add(dto.getC_ap());
 			data.add(dto.getC_maintain());
-			
+
 //			테이블 모델에 추가
 			model.addRow(data);
 			
+			System.out.println(data);
 		}
 
         JTextField search = new JTextField(40);
@@ -169,6 +169,7 @@ public class carListForm extends JFrame{
                 trs.setRowFilter(RowFilter.regexFilter(val));
             }
         });
+        
         JLabel lbl1 = new JLabel();
         lbl1.setText("검색:");
         lbl1.setBounds(10,10,300,30);
@@ -177,21 +178,26 @@ public class carListForm extends JFrame{
        this.add(lbl1);
 }
 	
-	class ImageDraw extends Canvas{
-		
-		@Override
-		public void paint(Graphics g) {
-			// TODO Auto-generated method stub
-			super.paint(g);
-			
-			if(imageName != null)
-			{
-				Image image = new ImageIcon(imageName).getImage();
-				g.drawImage(image,0,0,160, 200,this);
-			}
-		}
+	class ImageDraw extends Canvas {
+	    @Override
+	    public void paint(Graphics g) {
+	        super.paint(g);
+
+	        if (imageName != null) {
+	            try {
+	                // 상대 경로를 사용할 경우
+	                // Image image = new ImageIcon(getClass().getResource(imageName)).getImage();
+
+	                // 절대 경로를 사용할 경우
+	                Image image = new ImageIcon(imageName).getImage();
+
+	                g.drawImage(image, 0, 0, 160, 200, this);
+	            } catch (Exception e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    }
 	}
- 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			new carListForm();

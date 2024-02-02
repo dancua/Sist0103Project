@@ -92,7 +92,7 @@ public class carUpForm extends JFrame {
         lblPhoto = new JLabel("이미지명");
         lblPhoto.setBorder(new LineBorder(Color.pink));
         lblPhoto.setBounds(10, 280, 250, 30);
-        this.add(lblPhoto);
+//        this.add(lblPhoto);
 
         btnImage = new JButton("사진 선택");
         btnImage.setBounds(10, 320, 150, 30);
@@ -126,7 +126,8 @@ public class carUpForm extends JFrame {
         this.add(lbl8);		this.add(tfAp);
         this.add(lbl9);		this.add(tfMain);
         
-        this.add(lblPhoto);
+        
+        this.add(btnImage);
         this.add(updateButton);
     }
 
@@ -162,9 +163,13 @@ public class carUpForm extends JFrame {
             String newLevel = tfLevel.getText();
             String newAp = tfAp.getText();
             String newMain = tfMain.getText();
+            String newImage = imageName;
 
-            carDTO updatedCar = new carDTO(num, newName, newPrice, newFe, newFuel, newLevel, newAp, newMain, imageName);
 
+            carDTO updatedCar = new carDTO(num, newName, newPrice, newFe, newFuel, newLevel, newAp, newMain,imageName);
+
+            System.out.println(updatedCar);
+            
             boolean success = dao.update(updatedCar);
 
             if (success) {
@@ -188,7 +193,7 @@ public class carUpForm extends JFrame {
 
             if (imageName != null) {
                 Image image = new ImageIcon(imageName).getImage();
-                g.drawImage(image, 10, 10, 60, 70, this);
+                g.drawImage(image, 10, 10, 140, 140, this);
             }
         }
     }
