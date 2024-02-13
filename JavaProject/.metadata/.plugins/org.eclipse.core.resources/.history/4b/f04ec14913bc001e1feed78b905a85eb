@@ -1,0 +1,36 @@
+package day0126;
+
+import oracleDb.DBConnect;
+import java.sql.*;
+import java.util.Scanner;
+
+public class Quiz {
+
+	DBConnect db = new DBConnect();
+	
+	public void insert() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		Connection conn = null;
+		Statement stmt = null;
+		
+		
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Quiz q = new Quiz();
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		while(true)
+		{
+			System.out.println("학생정보시스템");
+		}
+
+	}
+
+}

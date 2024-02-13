@@ -1,0 +1,14 @@
+package day0126;
+
+import oracleDb.DBConnect;
+
+public class Quiz {
+
+	DBConnect db = new DBConnect();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

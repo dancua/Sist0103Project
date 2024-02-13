@@ -1,0 +1,44 @@
+package Project;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import javax.swing.JOptionPane;
+//			차 관리 페이지
+public class carIntro extends JFrame{
+	
+	JButton btnIntro;
+	
+	public carIntro() {
+			super("차 관리 페이지");
+
+			this.setBounds(270, 100, 400, 400);
+			initDesign();
+			this.setVisible(true);
+
+	}
+	public void initDesign() {
+		
+		JLabel background = new JLabel(new ImageIcon("C:\\sist0103\\image\\carImage\\images.jpg"));
+        background.setBounds(0, 0, 400, 400);
+        add(background);
+        
+		btnIntro = new JButton("프로그램 시작");
+		btnIntro.setBounds(100, 100, 80, 30);
+        btnIntro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              new carListForm();
+            }
+        });
+        this.add(btnIntro);
+	}
+	public static void main(String[] args) {
+		new carIntro();
+	}
+	
+}

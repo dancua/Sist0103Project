@@ -1,0 +1,23 @@
+package day0126;
+
+import oracleDb.DBConnect;
+import java.sql.*;
+
+public class Quiz {
+
+	DBConnect db = new DBConnect();
+	
+	public void insert() {
+		Connection conn = null;
+		Statement stmt = null;
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

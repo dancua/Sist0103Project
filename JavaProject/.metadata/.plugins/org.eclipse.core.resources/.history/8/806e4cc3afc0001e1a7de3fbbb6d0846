@@ -1,0 +1,342 @@
+package Project;
+
+import java.awt.BorderLayout;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.FileDialog;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Vector;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.RowFilter;
+import javax.swing.border.LineBorder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+
+import Project.carAddForm.PhotoDraw;
+
+public class carMain extends JFrame implements ActionListener{
+	
+	JTextField tfName,tfPrice,tfFe,tfFuel,tfLevel,tfAp,tfMaintain;
+	JButton btnImage,btnInsert;
+	JLabel lblPhoto;
+	String imageName;
+
+    JPanel btnPanel = new JPanel();
+    JPanel panel1 = new JPanel();
+    JPanel panel2 = new JPanel();
+    JPanel panel3 = new JPanel();
+    JPanel panel4 = new JPanel();
+    
+    carDAO dao = new carDAO();
+//    PhotoDraw photoDraw = new PhotoDraw();
+
+    public carMain() {
+
+        setTitle("자동차 관리 페이지");
+        setSize(600, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setLocationRelativeTo(null);
+
+        setPanel1();
+        setPanel2();
+        setPanel3();
+        setPanel4();
+        setBtnPanel();
+
+        setVisible(true);
+    }
+
+    void setVisibleFalse() {
+
+        panel1.setVisible(false);
+        panel2.setVisible(false);
+        panel3.setVisible(false);
+        panel4.setVisible(false);
+    }
+
+    private void setPanel1() {
+        panel1 = new JPanel();
+//        panel1.setBackground(Color.red);
+
+        Vector<String> tableTitle = new Vector<String>();
+        tableTitle.add("번호");
+        tableTitle.add("자동차명");
+        tableTitle.add("가격");
+        tableTitle.add("연비");
+        tableTitle.add("연료");
+        tableTitle.add("차급");
+        tableTitle.add("외형");
+        tableTitle.add("정비이력");
+
+        DefaultTableModel model = new DefaultTableModel(tableTitle, 0);
+
+        JTable table = new JTable(model);
+
+        table.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int srow = table.getSelectedRow();
+                String num = (String) table.getValueAt(srow, 0);
+                String c_name = (String) table.getValueAt(srow, 1);
+                int c_price = Integer.parseInt(table.getValueAt(srow, 2).toString());
+                double c_fe = Double.parseDouble(table.getValueAt(srow, 3).toString());
+                String c_fuel = (String) table.getValueAt(srow, 4);
+                String c_level = (String) table.getValueAt(srow, 5);
+                String c_ap = (String) table.getValueAt(srow, 6);
+                String c_maintain = (String) table.getValueAt(srow, 7);
+
+                carDTO u = new carDTO(num,c_name,c_price,c_fe,c_fuel,c_level,c_ap,c_maintain);
+                
+                JOptionPane.showMessageDialog(null, u);
+            }
+        });
+
+        carDAO dao = new carDAO();
+        Vector<carDTO> carList = dao.select();
+        for (carDTO car : carList) {
+            Vector<String> v = new Vector<String>();
+            v.add(car.getNum());
+            v.add(car.getC_name());
+            v.add(String.valueOf(car.getC_price()));
+            v.add(String.valueOf(car.getC_fe()));
+            v.add(car.getC_fuel());
+            v.add(car.getC_level());
+            v.add(car.getC_ap());
+            v.add(car.getC_maintain());
+
+            model.addRow(v);
+        }
+
+        JTextField search = new JTextField(40);
+        search.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                String val = search.getText();
+                TableRowSorter<TableModel> trs = new TableRowSorter<>(table.getModel());
+
+                table.setRowSorter(trs);
+                trs.setRowFilter(RowFilter.regexFilter(val));
+            }
+        });
+
+        panel1.add(search);
+        panel1.add(new JScrollPane(table));
+
+        add(panel1);
+
+        setVisibleFalse();
+        panel1.setVisible(true);
+    }
+
+    private void setPanel2() {
+        panel2 = new JPanel();
+        panel2.setBackground(Color.green);
+
+        JPanel infoPanel = new JPanel(new GridLayout(7, 2, 5, 5)); 
+
+        JLabel lbl1 = new JLabel("차량명:");
+        JLabel lbl2 = new JLabel("참고 사진:");
+        JLabel lbl3 = new JLabel("가격:");
+        JLabel lbl4 = new JLabel("연비:");
+        JLabel lbl5 = new JLabel("연료:");
+        JLabel lbl6 = new JLabel("차급:");
+        JLabel lbl7 = new JLabel("외형:");
+        JLabel lbl8 = new JLabel("정비이력:");
+
+        JTextField tf1 = new JTextField(20); 
+        btnImage = new JButton("사진등록");
+        JTextField tf2 = new JTextField(20);
+        JTextField tf3 = new JTextField(20);
+        JTextField tf4 = new JTextField(20);
+        JTextField tf5 = new JTextField(20);
+        JTextField tf6 = new JTextField(20);
+        JTextField tf7 = new JTextField(20);
+
+        infoPanel.add(lbl1);		infoPanel.add(tf1);
+        infoPanel.add(lbl2);		infoPanel.add(tf2);
+        infoPanel.add(lbl3);		infoPanel.add(tf3);
+        infoPanel.add(lbl4);		infoPanel.add(tf4);
+        infoPanel.add(lbl5);		infoPanel.add(tf5);
+        infoPanel.add(lbl6);		infoPanel.add(tf6);
+        infoPanel.add(lbl7);		infoPanel.add(tf7);
+        
+        panel2.add(infoPanel);
+    
+        JPanel bPanel = new JPanel();
+		JButton btnInsert = new JButton("차 등록");
+        btnInsert.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+//    			shopDto 생성
+    			carDTO dto = new carDTO();
+//    			dto에 8의 데이터를 넣는다.
+    				dto.setC_name(tfName.getText());
+    	            dto.setCarImage(imageName);
+    	            dto.setC_price(Integer.parseInt(tfPrice.getText()));
+    	            dto.setC_fe(Integer.parseInt(tfFe.getText()));
+    	            dto.setC_fuel(tfFuel.getText());
+    	            dto.setC_level(tfLevel.getText());
+    	            dto.setC_ap(tfAp.getText());
+    	            dto.setC_maintain(tfMaintain.getText());
+
+    	            dao.insert(dto);
+    		}
+        });
+        add(panel2);
+        bpanel.add(btnInsert);
+
+        setVisibleFalse();
+        panel2.setVisible(true);
+    }
+
+    private void setPanel3() {
+    	
+		panel3 = new JPanel();
+//		panel3.setBackground(Color.blue);
+		
+		JPanel infoPanel = new JPanel(new GridLayout(2, 2, 3, 3));
+				
+		JLabel lbl1 = new JLabel("삭제할 시퀀스:");
+	    JTextField tfNum = new JTextField(20);
+	    
+	    JButton btnDelete = new JButton("삭제하기");
+	    
+	    btnDelete.addActionListener(new ActionListener() {
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	            String num = tfNum.getText();
+
+	            if (num.isEmpty()) {
+	                JOptionPane.showMessageDialog(null, "삭제할 시퀀스를 입력해주세요.");
+	                return;
+	            }
+	            carDAO dao = new carDAO();
+	            boolean deleted = dao.delete(num);
+
+	            if (deleted) {
+	                JOptionPane.showMessageDialog(null, "삭제 완료");
+	            } else {
+	                JOptionPane.showMessageDialog(null, "삭제 실패.");
+	            }
+	        }
+	    });
+
+	    infoPanel.add(lbl1);	infoPanel.add(tfNum);
+		
+		panel3.add(infoPanel);
+		panel3.add(btnDelete);
+		
+		add(panel3);
+		
+		setVisibleFalse();
+		panel3.setVisible(true);
+	}
+
+    private void setPanel4() {
+
+    }
+
+    private void setBtnPanel() {
+    	JButton btn1 = new JButton("차 목록");
+		JButton btn2 = new JButton("차 등록");
+		JButton btn3 = new JButton("차량 목록 삭제");
+		JButton btn4 = new JButton("차량 목록 수정");
+//		JButton btnMain = new JButton("메인화면");
+		JButton btnClose = new JButton("닫기");
+		
+		btnPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+		btnPanel.add(btn1);
+		btnPanel.add(btn2);
+		btnPanel.add(btn3);
+		btnPanel.add(btn4);
+//		btnPanel.add(btnMain);
+		btnPanel.add(btnClose);
+
+		btnActionListener listener = new btnActionListener();
+		btn1.addActionListener(listener);
+		btn2.addActionListener(listener);
+		btn3.addActionListener(listener);
+		btn4.addActionListener(listener);
+//		btnMain.addActionListener(listener);
+		btnClose.addActionListener(listener);
+
+		add(btnPanel, BorderLayout.NORTH);
+    }
+    
+	class btnActionListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			JButton btn = (JButton) e.getSource();
+
+			if (btn.getText().equals("차 목록")) {
+				
+				System.out.println(btn.getText());
+				setPanel1();
+			}
+			if (btn.getText().equals("차 등록")) {
+				
+				System.out.println(btn.getText());
+				setPanel2();
+			}
+			if (btn.getText().equals("차량 목록 삭제")) {
+				
+				System.out.println(btn.getText());
+				setPanel3();
+			}
+			if(btn.getText().equals("차량 목록 수정")) {
+				
+				System.out.println(btn.getText());
+				setPanel4();
+			}
+//			if (btn.getText().equals("메인화면")) {
+//				 Main main = new Main();
+//	                main.setVisible(true);
+//	                dispose(); 
+//			}
+			if (btn.getText().equals("닫기")) {
+				
+				System.out.println(btn.getText());
+				JOptionPane.showMessageDialog(null, "종료합니다.");
+				System.exit(0);
+			}
+		}
+	}
+
+    public static void main(String[] args) {
+        new carMain();
+    }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

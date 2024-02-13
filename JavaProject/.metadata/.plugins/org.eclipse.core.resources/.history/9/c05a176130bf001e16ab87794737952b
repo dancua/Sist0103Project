@@ -1,0 +1,25 @@
+package day0130;
+
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class UpdateStuInfo extends JFrame {
+
+	Container cp;
+	JTextField tfName,tfJava,tfJsp,tfSpring;
+	JComboBox<String> cbBan;
+	JButton btnAdd;
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

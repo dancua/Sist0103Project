@@ -1,0 +1,29 @@
+package day0131;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class ShopMain extends JFrame implements ActionListener {
+	
+	public ShopMain() {
+			super("ShopMain");
+			
+			this.setBounds(270, 100, 400, 400);
+			initDesign();
+			this.setVisible(rootPaneCheckingEnabled);
+		
+	}
+	public void initDesign() {
+		this.setLayout(new GridLayout(2,2));
+		btnAdd = new JButton("상춤추가");
+		
+	}
+
+	public static void main(String[] args) {
+	
+		new ShopMain();
+	}
+
+}

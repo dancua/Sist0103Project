@@ -1,0 +1,80 @@
+package day0126;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+import oracleDb.DBConnect;
+
+public class HelloCrud_02 {
+	
+	DBConnect db = new DBConnect();
+
+	public void insert() {
+		
+		Scanner sc = new Scanner(System.in);
+		String name,addr;
+		String sql = "";
+		
+		System.out.println("이름을 입력하세요.");
+		name = sc.nextLine();
+		System.out.println("주소를 입력하세요.");
+		addr = sc.nextLine();
+		
+		sql = "insert into hello values(seq1.nextval, ' "+name+" ',' "+addr+"',sysdate)";
+		System.out.println(sql);
+		
+//		1.db연결
+		Connection conn = null;
+//		2.statement
+		Statement stmt = null; // sql문 객체 전송에 필요한 API
+		
+		conn = db.getOracle();
+		
+		try {
+			stmt = conn.createStatement();
+			
+//			3.sql문 실행
+			stmt.execute(sql);
+			System.out.println("**데이터 추가됨**");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(stmt, conn);
+		}
+	}
+	public void select() {
+		System.out.println("시퀀스\t이름\t주소\t가입날짜");
+		System.out.println("--------------------------------------");
+		String sql = "select * from hello";
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HelloCrud_02 hc = new HelloCrud_02();
+		
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		while(true)
+		{
+			System.out.println("**hello db 연습**");
+			System.out.println("1.insert 2.select  3.delete  4.update  9.exit");
+			
+			n = Integer.parseInt(sc.nextLine());
+			
+			if(n==1)
+				hc.insert();
+			else if(n==2)
+				hc.select();
+			else if(n==9) {
+			System.out.println("프로그램 종료");
+			break;
+			}
+		}
+	}
+
+}

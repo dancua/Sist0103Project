@@ -1,0 +1,93 @@
+package day0126;
+
+import oracleDb.DBConnect;
+import java.sql.*;
+import java.util.Scanner;
+
+public class Quiz {
+
+	DBConnect db = new DBConnect();
+	
+	public void insert() {
+		
+		Scanner sc = new Scanner(System.in);
+		String name,gender;
+		int age,hp;
+		String sql = "";
+		
+		System.out.println("이름을 입력하세요.");
+		name = sc.nextLine();
+		System.out.println("성별을 입력하세요.");
+		gender = sc.nextLine();
+		
+		
+		Connection conn = null;
+		Statement stmt = null;
+		
+	}
+	
+	public void select() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		Connection conn = null;
+		Statement stmt = null;
+		
+	}
+	public void delete() {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	Connection conn = null;
+	Statement stmt = null;
+	
+}
+	public void update() {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	Connection conn = null;
+	Statement stmt = null;
+	
+}
+	public void search() {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	Connection conn = null;
+	Statement stmt = null;
+	
+}
+	
+	
+	public static void main(String[] args) {
+		Quiz q = new Quiz();
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		while(true)
+		{
+			System.out.println("학생정보시스템");
+			System.out.println("1.학생정보입력   2.정보출력   3.정보삭제    4.학생정보 수정   5.학생검색   9.종료");
+			n = Integer.parseInt(sc.nextLine());
+			
+			if(n==1)
+				q.insert();
+			else if(n==2)
+				q.select();
+			else if(n==3)
+				q.delete();
+			else if(n==4)
+				q.update();
+			else if(n==5)
+				q.search();
+			else if(n==9) {
+				System.out.println("프로그램 종료");
+				 break;
+			}
+		}
+	}
+}

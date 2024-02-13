@@ -1,0 +1,47 @@
+package day0130;
+
+import java.awt.Color;
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AddStuInfo extends JFrame{
+	
+	Container cp;
+	JTextField tfName,tfJava,tfJsp,tfSpring;
+	JComboBox<String> cbBan;
+	JButton btnAdd;
+	
+	public AddStuInfo(String title) {
+		super(title);
+		
+		cp = this.getContentPane();
+		this.setBounds(270,100,200,250);
+		cp.setBackground(new Color(255,255,200));
+//		initDesing();
+		this.setVisible(true);
+	}
+	public void initDesing() 
+	{
+		this.setLayout(null);
+		
+		JLabel lblTitle1 = new JLabel("이름");
+		JLabel lblTitle2 = new JLabel("반");
+		JLabel lblTitle3 = new JLabel("JAVA");
+		JLabel lblTitle4 = new JLabel("JSP");
+		JLabel lblTitle5 = new JLabel("SPRING");
+	
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new AddStuInfo("학생정보추가프레임");
+
+	}
+
+}

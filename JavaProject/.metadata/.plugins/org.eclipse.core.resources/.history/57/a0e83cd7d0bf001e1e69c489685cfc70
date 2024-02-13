@@ -1,0 +1,14 @@
+package day0131;
+
+import java.util.Date;
+
+public class shopDto {
+
+	private String num;
+	private String sangpum;
+	private String photo;
+	private int su;
+	private int dan;
+	private Date guipday;
+	
+}

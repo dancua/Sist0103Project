@@ -1,0 +1,8 @@
+package day0131;
+
+public class shopDto {
+
+	private String num;
+	private String sangpum;
+	private String photo;
+}
